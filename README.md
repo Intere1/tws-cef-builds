@@ -21,8 +21,10 @@ the patches in [`patches/`](patches).
   called when a browser starts or stops producing audible sound
   (`WebContentsObserver::OnAudioStateChanged`).
 
-`0002` and `0003` are proposed upstream; once a CEF release carries them, these
-builds are retired.
+`0002` and `0003` are proposed upstream
+([#4336](https://github.com/chromiumembedded/cef/pull/4336),
+[#4335](https://github.com/chromiumembedded/cef/pull/4335)); once a CEF release
+carries them, these builds are retired.
 
 ## Build
 
