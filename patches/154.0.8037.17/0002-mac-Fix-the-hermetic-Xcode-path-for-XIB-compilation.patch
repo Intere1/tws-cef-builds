@@ -1,0 +1,18 @@
+Subject: mac: Fix the hermetic Xcode path for XIB compilation
+
+
+
+diff --git a/BUILD.gn b/BUILD.gn
+index 92c540976..a7332b2d9 100644
+--- a/BUILD.gn
++++ b/BUILD.gn
+@@ -172,7 +172,8 @@ if (is_mac) {
+       if (!use_system_xcode) {
+         args += [
+           "--developer_dir",
+-          hermetic_xcode_path,
++          rebase_path("//build/mac_files/xcode_binaries/Contents/Developer",
++                      root_build_dir),
+         ]
+       }
+       args += ibtool_flags
